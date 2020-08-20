@@ -8,10 +8,11 @@ import LiveUpdates from "../../pages/LiveUpdates";
 import { useStoreContext } from '../../utils/GlobalStore';
 import API from '../../utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "../../utils/actions";
+import "./style.css";
 
+function Navbar (){
 
-function Navbar() {
-    // Our provider is setup in index.js so we can use the GlobalStore here easily.
+ // Our provider is setup in index.js so we can use the GlobalStore here easily.
 
     // Something we want to do at the beginning of the application is check if the user is logged in or not, if the user is, we'll
     // dispatch an action 
@@ -43,18 +44,19 @@ function Navbar() {
         })
     }
 
-    return (
+  
+
+   return (
 
         <Router>
-            <div>
-                {/* Componetize this into Nav */}
+            <div className="navbar">
                 <div>
                         {!state.userLoggedIn ? (
                             // if the user is Logged out
                             <>
                                 <b>CovidCorner</b> &nbsp;&nbsp;&nbsp;
-                                <Link to="/liveupdates">Live Updates</Link>
-                                <Link to="/login">Login</Link> 
+                                <Link className="navLinks" to="/liveupdates">Live Updates</Link> 
+                                <Link className="navLinks"to="/login">Login</Link> 
                                 {/* | <Link to="/signup">Signup</Link> */}
                             </>
                         ) : (
@@ -99,8 +101,7 @@ function Navbar() {
             </div>
         </Router>
     );
-}
-
+                }
 
 
 export default Navbar;
