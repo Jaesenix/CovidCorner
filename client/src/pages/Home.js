@@ -1,6 +1,7 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import { Grid, Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+
 
 function Home () {
     return (
@@ -15,8 +16,7 @@ function Home () {
         </Grid>
         <Grid item xs={3}>
           <h3>Search</h3>
-          <Button variant="contained" color="primary" href="/login">
-  Link
+          <Button variant="contained" color="primary" href="/login">Check Your Sytmptoms
 </Button><br>
           </br>
           <Button variant="contained">Find a Testing Center</Button>
