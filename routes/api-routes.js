@@ -44,4 +44,12 @@ module.exports = function(app) {
       });
     }
   });
+
+  // Route for getting data from the Data table
+  app.get("/api/map_data", function(req, res) {
+    db.Data.findAll({}).then(function(dbData) {
+        res.json(dbData);
+    });
+ }); 
+
 };

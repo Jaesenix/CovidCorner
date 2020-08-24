@@ -1,22 +1,21 @@
-const db = require("../models");
-const passport = require("../config/passport");
+require('dotenv').config();
+const axios = require('axios');
+const db = require('../models');
 
-function mapResponse(response) {
-    let covidData = response.map(state => ({
-        state: state.state,
-        positive: state.positive,
-        recovered: state.recovered,
-        deaths: state.death 
-    }))
-    return covidData;
-}
-
-db.sequelize.sync({}).then(() => {
+// Makes API call to Covid Tracking Project and syncs Data table with mapped response
+db.sequelize.sync({ force: true }).then(() => {
     axios.get("https://api.covidtracking.com/v1/states/current.json")
-     .then(response => {
-        mapResponse(response); 
-        db.Data.insert({
-            covidData
+        .then(response => {
+            const covidData = response.data.map(state => ({
+                state: "US-"+state.state,
+                positive: state.positive,
+                recovered: state.recovered,
+                deaths: state.death 
+            }))
+            console.log(covidData);
+            db.Data.bulkCreate(covidData)
         })
-     })
+        .catch(err => {
+            console.log(err);
+        })
 })
