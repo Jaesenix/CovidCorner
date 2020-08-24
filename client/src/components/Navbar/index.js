@@ -1,14 +1,13 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom'
-// import './App.css';
-import Login from "../../pages/Login";
-import Signup from "../../pages/Signup";
+import { BrowserRouter as Route, Link, Redirect } from 'react-router-dom'
+
 import Members from "../../pages/Members";
-import LiveUpdates from "../../pages/LiveUpdates";
+
 import { useStoreContext } from '../../utils/GlobalStore';
 import API from '../../utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "../../utils/actions";
 import "./style.css";
+import Logo from "../../assets/logo.png"
 
 function Navbar() {
 
@@ -41,25 +40,28 @@ function Navbar() {
     }
 
     return (
-        <div className="navbar">
-            <div>
-                {!state.userLoggedIn ? (
-                    // if the user is Logged out
+        <div className="navbar navbar-dark bg-dark">
+            {!state.userLoggedIn ? (
+                // if the user is Logged out
+                <div>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <Link className="logo" to="/"><img id="logo" src={Logo} ></img></Link>
+                        <Link className="nav-link" to="/liveupdates" style={{fontSize: '16px'}}>Live Updates</Link>
+                        <Link className="nav-link" to="/login" style={{fontSize: '16px'}}>Login</Link>
+
+
+                    </div>
+
+                </div>
+            ) : (
+                    // If the user is Logged In
                     <>
-                        <Link to="/">CovidCorner</Link>
-                                <Link className="navLinks" to="/liveupdates">Live Updates</Link>
-                        <Link className="navLinks" to="/login">Login</Link>
-                        {/* | <Link to="/signup">Signup</Link> */}
+                        <b>Welcome {state.email}!</b> &nbsp;&nbsp;&nbsp;
+                        <Link to="/members">Members</Link> | <a onClick={() => logout()} href="#">Logout</a>
                     </>
-                ) : (
-                        // If the user is Logged In
-                        <>
-                            <b>Welcome {state.email}!</b> &nbsp;&nbsp;&nbsp;
-                                <Link to="/members">Members</Link> | <a onClick={() => logout()} href="#">Logout</a>
-                        </>
-                    )
-                }
-            </div>
+                )
+            }
+
 
             {
 
@@ -71,30 +73,30 @@ function Navbar() {
                         <Link to="/liveupdates"></Link>
                     </>
 
-) : (
-    // These routes are only available to LOGGED IN users
-    <>
-        <Route exact path={["/login","/signup"]}>
-            {/* If you are logged in, going to the login/signup page will take you to the members page */}
-            <Redirect to="/members" />
-        </Route>
-        <Route exact path="/members" component={Members} />
-    </>
-    )
-}
-{
-/* These routes are ALWAYS available */
-}
-            
-               
-            
+                ) : (
+                        // These routes are only available to LOGGED IN users
+                        <>
+                            <Route exact path={["/login", "/signup"]}>
+                                {/* If you are logged in, going to the login/signup page will take you to the members page */}
+                                <Redirect to="/members" />
+                            </Route>
+                            <Route exact path="/members" component={Members} />
+                        </>
+                    )
+            }
+            {
+                /* These routes are ALWAYS available */
+            }
+
+
+
 
             { /*If none of the other pages match, redirect them to the main page */}
             <Redirect to="/" />
 
 
 
-        </div>
+        </div >
 
     );
 }

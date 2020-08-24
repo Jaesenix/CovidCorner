@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Button } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import {Link} from "react-router-dom";
+
 
 
 function Home () {
@@ -16,14 +17,13 @@ function Home () {
         </Grid>
         <Grid item xs={3}>
           <h3>Search</h3>
-          <Button variant="contained" color="primary" href="/login">Check Your Sytmptoms
-</Button><br>
+          <Link to="/login"><Button variant="contained">Take Self-Assessment</Button></Link><br>
           </br>
-          <Button variant="contained">Find a Testing Center</Button>
+          <Link to="/login"><Button variant="contained">Find a Testing Center</Button></Link>
 
         </Grid>
       </Grid>
-     
+      
     </div>
     
        </>

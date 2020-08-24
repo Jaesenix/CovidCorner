@@ -1,8 +1,43 @@
-.navLinks {
+.nav-link {
     float: right; 
     margin-right: 10px;
+    margin-top: 10px;
+    text-decoration: none;
 }
 
+.logo {
+    margin-top: 7px;
+    color: white;
+    text-decoration: none;
+    float: left;
+}
+
+#logo {
+    height: auto;
+    width: 200px;
+}
+
+.nav-link:hover {
+    color: white;
+    text-decoration: none;
+}
+.nav-link:active {
+    color: white;
+    text-decoration: none;
+
+}
+.nav-link:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:link {
+    color: white;
+    text-decoration: none;
+}
+
+
+
 .navbar {
-    background-color: #9F000F;
+    background-color: #AC4335;
 }
