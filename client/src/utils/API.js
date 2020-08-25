@@ -13,5 +13,8 @@ export default {
     },
     logout: () => {
         return axios.get("/logout");
+    },
+    getData: () => {
+        return axios.get("/api/map_data");
     }
 }
