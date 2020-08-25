@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import Map from '../components/Map';
 
 
 function Home () {
@@ -13,6 +14,7 @@ function Home () {
         </Grid>
         <Grid item xs={5}>
           <div> Map </div>
+          <Map />
         </Grid>
         <Grid item xs={3}>
           <h3>Search</h3>
