@@ -1,8 +1,11 @@
 import React from "react";
 
+
 function LiveUpdates () {
     return (
-        <p> Hello World</p>
+       <div>
+           Live Updates
+       </div>
     )
 }
 
