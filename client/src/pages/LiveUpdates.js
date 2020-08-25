@@ -1,9 +1,11 @@
 import React from "react";
-import VerticleTabs from "../components/Tabs"
+
 
 function LiveUpdates () {
     return (
-       <VerticleTabs />
+       <div>
+           Live Updates
+       </div>
     )
 }
 
