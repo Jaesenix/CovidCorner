@@ -1,65 +1,33 @@
-import React from 'react';
-import API from '../../utils/API'
-import { render } from "react-dom";
+import React from "react";
+import API from "../../utils/API"
 import { Chart } from "react-google-charts";
 
-const data = [
-    ['State', 'COVID-19 Cases'],
-    ['US-AL', 200],
-    ['US-AZ', 200],
-    ['US-AK', 300],
-    ['US-AR', 400],
-    ['US-CA', 400],
-    ['US-CO', 500],
-    ['US-CT', 600],
-    ['US-DE', 700],
-    ['US-FL', 400],
-    ['US-GA', 400],
-    ['US-HI', 400],
-    ['US-ID', 400],
-    ['US-IL', 400],
-    ['US-IN', 400],
-    ['US-IA', 400],
-    ['US-KS', 400],
-    ['US-KY', 400],
-    ['US-LA', 400],
-    ['US-ME', 400],
-    ['US-MD', 400],
-    ['US-MA', 400],
-    ['US-MI', 400],
-    ['US-MN', 400],
-    ['US-MS', 400],
-    ['US-MO', 400],
-    ['US-MT', 400],
-    ['US-NE', 400],
-    ['US-NV', 400],
-    ['US-NH', 400],
-    ['US-NJ', 400],
-    ['US-NM', 400],
-    ['US-NY', 428558],
-    ['US-NC', 400],
-    ['US-ND', 400],
-    ['US-OH', 400],
-    ['US-OK', 400],
-    ['US-OR', 400],
-    ['US-PA', 400],
-    ['US-RI', 400],
-    ['US-SC', 400],
-    ['US-SD', 400],
-    ['US-TN', 400],
-    ['US-TX', 400],
-    ['US-UT', 400],
-    ['US-VT', 400],
-    ['US-VA', 400],
-    ['US-WA', 400],
-    ['US-WV', 400],
-    ['US-WI', 400],
-    ['US-WY', 400]
-];
-
 class Map extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { loading: true, data: null, keys: [["State", "Positive Cases"]] };
+    }
+
+    componentDidMount() {
+        this.addData();
+    }
+
+    addData = () => {
+        API.getData().then(res => {
+            const values = res.data.map(stateData => ([
+                stateData.state,
+                stateData.positive
+            ]))
+            const joined = this.state.keys.concat(values);
+            this.setState({ loading: false, data: joined })
+            console.log(this.state.data);
+        })    
+    }; 
+
     render() {
-        return (
+        const {loading, data} = this.state;
+
+        return loading ? "Classic loading placeholder" : (
             <Chart
                 chartType="GeoChart"
                 width="100%"
@@ -69,7 +37,7 @@ class Map extends React.Component {
                     region: 'US',
                     resolution: 'provinces',
                     colorAxis: {
-                      colors: ['white','#005eaa']
+                        colors: ['white','#005eaa']
                     } 
                 }}
                 mapsApiKey=""

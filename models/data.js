@@ -12,9 +12,6 @@ module.exports = function (sequelize, DataTypes) {
         },
         deaths: {
             type: DataTypes.INTEGER
-        },
-        index: {
-            type: DataTypes.INTEGER
         }
     })
     return Data;
