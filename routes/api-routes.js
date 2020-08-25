@@ -1,7 +1,7 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
-import axios from "axios";
+// import axios from "axios";
 
 module.exports = function(app) {
   // Route for getting location for nearest covid testing centers
