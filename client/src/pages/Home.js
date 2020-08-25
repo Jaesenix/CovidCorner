@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import Map from '../components/Map';
+import Stats from '../components/Stats';
 
 
 function Home () {
@@ -11,6 +12,7 @@ function Home () {
       <Grid container style={{textAlign: "center"}}>
         <Grid item xs={4} >
           <div>Statistics</div>
+          <Stats />
         </Grid>
         <Grid item xs={5}>
           <div> Map </div>
