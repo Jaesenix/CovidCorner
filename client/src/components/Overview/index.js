@@ -62,9 +62,9 @@ export default function Overview() {
     <div>
       <AppBar position="static" >
         <Tabs value={value} className="label" onChange={handleChange} aria-label="simple tabs example" indicatorColor={'yellow'} style={{backgroundColor: '#DCB17F'}}>
-          <Tab label="Symptoms" {...a11yProps(0)} style={{fontSize: '16px'}}/>
-          <Tab label="Prevention" {...a11yProps(1)} style={{fontSize: '16px'}}/>
-          <Tab label="Treatment" {...a11yProps(2)} style={{fontSize: '16px'}}/>
+          <Tab label="Symptoms" {...a11yProps(0)} style={{fontSize: '14px'}}/>
+          <Tab label="Prevention" {...a11yProps(1)} style={{fontSize: '14px'}}/>
+          <Tab label="Treatment" {...a11yProps(2)} style={{fontSize: '14px'}}/>
         </Tabs>
       </AppBar>
       <TabPanel className="body" value={value} index={0}>

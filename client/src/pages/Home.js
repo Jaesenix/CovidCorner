@@ -20,7 +20,7 @@ function Home () {
         </Grid>
         <Grid item xs={3}>
           <h3>Search</h3>
-          <Link to="/login"><Button variant="contained">Take Self-Assessment</Button></Link><br>
+          <Link to="/members"><Button variant="contained">Take Self-Assessment</Button></Link><br>
           </br>
           <Link to="/login"><Button variant="contained">Find a Testing Center</Button></Link>
 
