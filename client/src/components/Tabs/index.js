@@ -47,7 +47,7 @@ function a11yProps(index) {
 
 const styles = {
   tabLabel: {
-    fontSize: '18px',
+    fontSize: '16px',
     fontFamily: 'Nunito, sans-serif',
     color: '#18252D'
   }
@@ -89,6 +89,7 @@ export default function VerticalTabs() {
         <Tab label="Self-Assessment" {...a11yProps(2)} style={styles.tabLabel}/>
         <Tab label="Find a Testing Center" {...a11yProps(3)} style={styles.tabLabel}/>
         <Tab label="Additional Resources" {...a11yProps(4)} style={styles.tabLabel}/>
+        
       </Tabs>
       <TabPanel className="panel" value={value} index={0}>
         Hello!
@@ -109,6 +110,7 @@ export default function VerticalTabs() {
       <TabPanel className="panel" value={value} index={4}>
       <ResourceCard />
       </TabPanel>
+
     </div>
   );
 }
