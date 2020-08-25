@@ -4,8 +4,8 @@ import VerticleTabs from "../components/Tabs"
 
 
 function Members(){
-    const [state] = useStoreContext();
-    const {email} = state;
+    // const [state] = useStoreContext();
+    // const {email} = state;
     return (
       <VerticleTabs />
     )

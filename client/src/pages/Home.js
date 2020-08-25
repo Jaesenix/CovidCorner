@@ -2,11 +2,7 @@ import React from "react";
 import { Grid, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import Map from '../components/Map';
-<<<<<<< HEAD
-import Navbar from '../components/Navbar';
-=======
 import Stats from '../components/Stats';
->>>>>>> d31d5be9ac3a479bb620c76d3e59c4690c521568
 
 
 function Home () {
