@@ -37,7 +37,7 @@ class Map extends React.Component {
                     region: 'US',
                     resolution: 'provinces',
                     colorAxis: {
-                        colors: ['white','#005eaa']
+                        colors: ['#ffffff','#d7effc','#bde4fb','#005eaa']
                     } 
                 }}
                 mapsApiKey=""
