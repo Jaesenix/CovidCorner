@@ -10,6 +10,7 @@
     "start:dev": "concurrently \"nodemon server.js --ignore 'client/*'\" \"npm run client\"",
     "start:prod": "node server.js",
     "client": "cd client && npm start",
+    "type": "module",
     "lint": "eslint --quiet .",
     "fix": "eslint --fix .",
     "watch": "nodemon server.js",
