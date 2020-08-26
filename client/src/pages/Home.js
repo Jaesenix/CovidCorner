@@ -33,14 +33,15 @@ function Home () {
       <Grid container style={styles.container}>
         <Grid item xs={2}>
          <Stats />
-         {/* <Prompts /> */}
+       
         </Grid>
-         <Grid item xs={2}>
-        </Grid>
-        <Grid item xs={8} style={{justifyContent: 'center'}}>
-          <h3 style={styles.mapTop}>Total U.S. Cases by State</h3>
-          <p style={styles.mapTop2}>*hover over each state to see positive cases by jurisdiction</p>
+        <Grid item xs={9} style={{justifyContent: 'center'}}>
+          {/* <h3 style={styles.mapTop}>Total U.S. Cases by State</h3>
+          <p style={styles.mapTop2}>*hover over each state to see positive cases by jurisdiction</p> */}
           <Map />
+        </Grid>
+        <Grid item xs={1}>
+        <Prompts />
         </Grid>
       </Grid>
       
