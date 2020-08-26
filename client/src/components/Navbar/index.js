@@ -1,13 +1,10 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Route, Link, Redirect } from 'react-router-dom'
-
-import Members from "../../pages/Members";
-
 import { useStoreContext } from '../../utils/GlobalStore';
 import API from '../../utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "../../utils/actions";
 import "./style.css";
-import Logo from "../../assets/logo.png"
+import Logo from "../../assets/newlogo.png"
 
 function Navbar() {
 
@@ -46,7 +43,7 @@ function Navbar() {
                 <div>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <Link className="logo" to="/"><img id="logo" src={Logo}></img></Link>
-                        <Link className="nav-link" to="/liveupdates" style={{fontSize: '16px'}}>Live Updates</Link>
+                        <Link className="nav-link" to="/liveupdates" style={{fontSize: '16px'}}>News</Link>
                         <Link className="nav-link" to="/login" style={{fontSize: '16px'}}>Login</Link>
 
 
@@ -58,7 +55,10 @@ function Navbar() {
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <Link className="logo" to="/"><img id="logo" src={Logo}></img></Link>
                         <Link className="nav-link" onClick={() => logout()} to='/' style={{fontSize: '16px'}}>Logout</Link>
-                            <Link className="nav-link" to="/members" style={{fontSize: '16px'}}>Home</Link>
+                            
+                            <Link className="nav-link" to="/liveupdates" style={{fontSize: '16px'}}>News</Link>
+                            <Link className="nav-link" to="/members" style={{fontSize: '16px'}}>Discover</Link>
+                            
                             
                             </div>
                 )
@@ -72,16 +72,16 @@ function Navbar() {
                     <>
                         <Link to="/login"></Link>
                         <Link to="/signup"></Link>
-                        <Link to="/liveupdates"></Link>
+                        {/* <Link to="/liveupdates"></Link> */}
                     </>
 
                 ) : (
                         // These routes are only available to LOGGED IN users
                         <>
-                        <Route exact path={["/login", "/signup"]}>
+                        <Link exact path={["/login", "/signup"]}>
                             {/* If you are logged in, going to the login/signup page will take you to the members page */}
                             <Redirect to="/members" />
-                        </Route>
+                        </Link>
                         <Link to="/members"></Link>
                     </>
                     )

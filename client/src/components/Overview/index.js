@@ -46,7 +46,7 @@ const styles = {
   topTab: {
     fontSize: '18px',
     fontFamily: 'Nunito, sans-serif',
-    color: '#F3E8E2'
+    color: '#8F8F8F'
   }
 }; 
 export default function Overview() {
@@ -61,7 +61,7 @@ export default function Overview() {
   return (
     <div>
       <AppBar position="static" >
-        <Tabs value={value} className="label" onChange={handleChange} aria-label="simple tabs example" indicatorColor={'yellow'} style={{backgroundColor: '#DCB17F'}}>
+        <Tabs value={value} className="label" onChange={handleChange} aria-label="simple tabs example" indicatorColor={'yellow'} style={{backgroundColor: '#8F8F8F'}}>
           <Tab label="Symptoms" {...a11yProps(0)} style={{fontSize: '14px'}}/>
           <Tab label="Prevention" {...a11yProps(1)} style={{fontSize: '14px'}}/>
           <Tab label="Treatment" {...a11yProps(2)} style={{fontSize: '14px'}}/>
