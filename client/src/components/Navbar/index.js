@@ -43,7 +43,7 @@ function Navbar() {
                 <div>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <Link className="logo" to="/"><img id="logo" src={Logo}></img></Link>
-                        <Link className="nav-link" to="/liveupdates" style={{fontSize: '16px'}}>News</Link>
+                        {/* <Link className="nav-link" to="/liveupdates" style={{fontSize: '16px'}}>News</Link> */}
                         <Link className="nav-link" to="/login" style={{fontSize: '16px'}}>Login</Link>
 
 
@@ -56,7 +56,7 @@ function Navbar() {
                         <Link className="logo" to="/"><img id="logo" src={Logo}></img></Link>
                         <Link className="nav-link" onClick={() => logout()} to='/' style={{fontSize: '16px'}}>Logout</Link>
                             
-                            <Link className="nav-link" to="/liveupdates" style={{fontSize: '16px'}}>News</Link>
+                            {/* <Link className="nav-link" to="/liveupdates" style={{fontSize: '16px'}}>News</Link> */}
                             <Link className="nav-link" to="/members" style={{fontSize: '16px'}}>Discover</Link>
                             
                             
