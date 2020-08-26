@@ -1,0 +1,20 @@
+.prompt-link:hover {
+    color:#18252D;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif
+}
+.prompt-link:active {
+    color: #18252D;
+    text-decoration: none;
+
+}
+.prompt-link:visited {
+    color: #18252D;
+    text-decoration: none;
+}
+
+.prompt-link:link {
+    color: #18252D;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif
+}

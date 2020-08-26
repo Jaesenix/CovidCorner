@@ -31,17 +31,20 @@ class Map extends React.Component {
             <Chart
                 chartType="GeoChart"
                 width="100%"
-                height="400px"
+                height="500px"
                 data={data}
                 options = {{
                     region: 'US',
                     resolution: 'provinces',
                     colorAxis: {
-                        colors: ['#ffffff','#d7effc','#bde4fb','#005eaa']
-                    } 
+                        colors: ['#CAE1E3','#549BA0','#38686B','#2A4E50']
+                    },
+                    backgroundColor: '#F5F5F5', 
+
                 }}
                 mapsApiKey=""
                 rootProps={{ 'data-testid': '1' }}
+              
             />
         )
     }

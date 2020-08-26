@@ -14,7 +14,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { Grid } from '@material-ui/core';
-import WHO from '../../assets/WHO.jpg';
+import WHO from '../../assets/who.jpg';
 import CDC from '../../assets/cdc.jpg';
 import USA from '../../assets/usa.png';
 import "./style.css"
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 10,
     marginBottom: 20,
     fontFamily: 'Nunito, sans-serif',
-    fontSize: '50px'
+    backgroundColor:"#F5F5F5"
   },
   media: {
     height: 'auto',
@@ -40,11 +40,21 @@ const useStyles = makeStyles((theme) => ({
     transition: theme.transitions.create('transform', {
       duration: theme.transitions.duration.shortest,
     }),
+
   },
   expandOpen: {
     transform: 'rotate(180deg)',
+
   }
 }));
+
+const styles= {
+  content: {
+    fontSize: '30px',
+    fontFamily: 'Nunito, sans-serif',
+    color: '#353535'
+  }
+};
 
 function ListItemLink(props) {
   return <ListItem button component="a" {...props} />;
@@ -83,12 +93,12 @@ export default function ResourceReviewCard() {
         title="World Health Organization"
        
       />
-      <CardMedia 
+      {/* <CardMedia 
         className={classes.media}
         image={WHO}
         title="WHO"
-        style={{objectFit: 'cover'}}
-      />
+        style={{backgroundColor: "blue"}}
+      /> */}
       <CardContent>
      
       </CardContent>
@@ -106,10 +116,10 @@ export default function ResourceReviewCard() {
         </IconButton>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-        <List component="nav" aria-label="main mailbox folders">
+        <CardContent >
+        <List component="nav" aria-label="main mailbox folders" >
         <ListItemLink href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" target="_blank">
-  <ListItemText primary="Advice for the Public"/>
+  <ListItemText primary="Advice for the Public" style={styles.content}/>
 </ListItemLink>
 <ListItemLink href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub" target="_blank">
   <ListItemText primary="Questions and Answers" />
@@ -131,12 +141,12 @@ export default function ResourceReviewCard() {
        title="Centers for Disease Control and Prevention"
       
      />
-     <CardMedia
+     {/* <CardMedia
        className={classes.media}
        image={CDC}
        title="WHO"
        
-     />
+     /> */}
      <CardContent>
     
      </CardContent>
@@ -180,11 +190,11 @@ export default function ResourceReviewCard() {
         title="U.S. Government Services"
        
       />
-      <CardMedia
+      {/* <CardMedia
         className={classes.media}
         image={USA}
         title="WHO"
-      />
+      /> */}
       <CardContent>
      
       </CardContent>
