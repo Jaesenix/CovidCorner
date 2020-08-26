@@ -1,8 +1,24 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const axios = require("axios");
 
 module.exports = function(app) {
+  // Route for getting location for nearest covid testing centers
+  app.get("/api/geolocation", function(req, res) {
+    return axios.get("https://www.googleapis.com/geolocation/v1/geolocate?key=" + process.env.GEOLOCATION_API_KEY + "&callback=initMap").then(response => {
+      res.json(response.data);
+      console.log(response.data);
+    })
+  });
+
+  // Route for getting Covid19-related articles
+  app.get("/api/articles", function(req, res) {
+    return axios.get("https://api.nytimes.com/svc/search/v2/articlesearch.json?q=covid" + "&api-key=" + process.env.NYT_API_KEY).then(response => {
+      res.json(response.data);
+    })
+  })
+
   // Route for logging in
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
     res.json(req.user);

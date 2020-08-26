@@ -9,6 +9,7 @@ import Assessment from "../Assessment";
 import ResourceCard from "../Resources";
 import Overview from  "../Overview"
 import "./style.css"
+import Welcome from "../Welcome"
 
 
 
@@ -49,8 +50,8 @@ const styles = {
   tabLabel: {
     fontSize: '16px',
     fontFamily: 'Nunito, sans-serif',
-    color: '#18252D'
-  }
+    color: '#353535'
+  },
 };
 
 const useStyles = makeStyles((theme) => ({
@@ -92,7 +93,7 @@ export default function VerticalTabs() {
         
       </Tabs>
       <TabPanel className="panel" value={value} index={0}>
-        Hello!
+       <Welcome />
       </TabPanel>
 
       <TabPanel className="panel" value={value} index={1}>

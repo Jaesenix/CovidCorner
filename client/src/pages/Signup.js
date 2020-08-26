@@ -4,6 +4,17 @@ import API from "../utils/API";
 import { AUTH_SET_LOGGED_IN } from "../utils/actions";
 import { useStoreContext } from '../utils/GlobalStore';
 
+const styles = {
+    signup: {
+      fontFamily: 'Nunito, sans-serif',
+      color: '#353535'
+    },
+    signupText: {
+        fontFamily: 'Nunito, sans-serif',
+      color: '#353535'
+    }
+  };
+
 function Signup() {
     const [showError, setShowError] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
@@ -36,13 +47,13 @@ function Signup() {
         <div className="container">
             <div className="row">
                 <div className="col-md-6 col-md-offset-3">
-                    <h2>Sign Up Form</h2>
+                    <h2 style={styles.signup}>Sign Up Form</h2>
                     <form className="signup" onSubmit={handleSignup}>
-                        <div className="form-group">
+                        <div className="form-group" style={styles.signupText}>
                             <label htmlFor="exampleInputEmail1">Email address</label>
                             <input type="email" className="form-control" placeholder="Email" ref={emailRef} />
                         </div>
-                        <div className="form-group">
+                        <div className="form-group" style={styles.signupText}>
                             <label htmlFor="exampleInputPassword1">Password</label>
                             <input type="password" className="form-control" placeholder="Password" ref={passwordRef} />
                         </div>
@@ -50,10 +61,10 @@ function Signup() {
                             <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                             <span className="sr-only">Error:</span> <span className="msg">{errorMessage}</span>
                         </div>
-                        <button type="submit" className="btn btn-default">Sign Up</button>
+                        <button type="submit" className="btn btn-default" style={styles.signupText}>Sign Up</button>
                     </form>
                     <br />
-                    <p>Or log in <Link to="/login">here</Link></p>
+                    <p style={styles.signupText}>Or log in <Link to="/login" style={{fontFamily: 'Nunito, sans-serif'}}>here</Link></p>
                 </div>
             </div>
         </div>
