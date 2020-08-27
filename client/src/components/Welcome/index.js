@@ -14,7 +14,7 @@ const styles = {
 
 const Welcome = () => {
   const [state] = useStoreContext();
-  const { email } = state;
+  const { email, name, mask, unemployed, household } = state;
   
     return (
       <>
