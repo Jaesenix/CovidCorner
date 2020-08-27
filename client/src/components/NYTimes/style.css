@@ -1,16 +1,16 @@
-div {
+.nytimes {
   background-color: #f5f5f5;
   width: 70%;
   height: 70%;
   overflow-x: hidden;
   overflow-y: scroll;
 }
-h5 {
+.h5nytimes {
   color: #353535;
   text-decoration-line: underline;
   font-size: 14px;
 }
-p {
+.pnytimes {
   color: #1e3748;
 }
 /* .progress {
