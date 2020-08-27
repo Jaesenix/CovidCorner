@@ -6,14 +6,14 @@ import { useStoreContext } from '../utils/GlobalStore';
 
 const styles = {
     signup: {
-      fontFamily: 'Nunito, sans-serif',
-      color: '#353535'
+        fontFamily: 'Nunito, sans-serif',
+        color: '#353535'
     },
     signupText: {
         fontFamily: 'Nunito, sans-serif',
-      color: '#353535'
+        color: '#353535'
     }
-  };
+};
 
 function Signup() {
     const [showError, setShowError] = useState(false);
@@ -21,13 +21,21 @@ function Signup() {
 
     const emailRef = useRef();
     const passwordRef = useRef();
+    const maskRef = useRef();
+    const unemployedRef = useRef();
+    const householdRef = useRef();
+    const nameRef = useRef();
     const [, dispatch] = useStoreContext();
 
     const handleSignup = (event) => {
         event.preventDefault();
         const signupData = {
             email: emailRef.current.value,
-            password: passwordRef.current.value
+            password: passwordRef.current.value,
+            mask: maskRef.current.value,
+            unemployed: unemployedRef.current.value,
+            household: householdRef.current.value,
+            name: nameRef.current.value
         };
         API.signup(signupData).then(response => {
             const { email } = response.data;
@@ -57,6 +65,31 @@ function Signup() {
                             <label htmlFor="exampleInputPassword1">Password</label>
                             <input type="password" className="form-control" placeholder="Password" ref={passwordRef} />
                         </div>
+                        <div className="form-group" style={styles.signupText}>
+                            <label htmlFor="exampleInputPassword1">First Name</label>
+                            <input type="name" className="form-control" placeholder="Name" ref={nameRef} />
+                        </div>
+                        <div class="form-group" style={styles.signupText}>
+                            <label for="exampleFormControlSelect1">Do you follow government recommendations on mask usage?</label>
+                            <select class="form-control" placeholder="Example input placeholder" ref={maskRef}>
+                                <option value={true}>Yes</option>
+                                <option value={false}>No</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style={styles.signupText}>
+                            <label for="exampleFormControlSelect1">Are you currently unemployed due to COVID?</label>
+                            <select class="form-control" ref={unemployedRef} >
+                                <option value={true}>Yes</option>
+                                <option value={false}>No</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style={styles.signupText}>
+                            <label for="exampleFormControlSelect1">Do you live in a shared household?</label>
+                            <select class="form-control" ref={householdRef}>
+                                <option value={true}>Yes</option>
+                                <option value={false}>No</option>
+                            </select>
+                        </div>
                         <div style={{ "display": showError ? "block" : "none" }} id="alert" className="alert alert-danger" role="alert">
                             <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                             <span className="sr-only">Error:</span> <span className="msg">{errorMessage}</span>
@@ -64,7 +97,7 @@ function Signup() {
                         <button type="submit" className="btn btn-default" style={styles.signupText}>Sign Up</button>
                     </form>
                     <br />
-                    <p style={styles.signupText}>Or log in <Link to="/login" style={{fontFamily: 'Nunito, sans-serif'}}>here</Link></p>
+                    <p style={styles.signupText}>Or log in <Link to="/login" style={{ fontFamily: 'Nunito, sans-serif' }}>here</Link></p>
                 </div>
             </div>
         </div>
