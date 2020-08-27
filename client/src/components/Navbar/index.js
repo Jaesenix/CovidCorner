@@ -12,11 +12,15 @@ function Navbar() {
     useEffect(() => {
         // Try getting our user-data, if the user is logged in, we will update our GlobalStore to refelct that
         API.checkUserInfo().then(response => {
-            const { email } = response.data;
+            const { email, name, mask, unemployed, household } = response.data;
             dispatch({
                 type: AUTH_SET_LOGGED_IN,
                 data: {
-                    email
+                    email,
+                    name,
+                    mask,
+                    unemployed,
+                    household
                 }
             })
         }).catch(err => {
@@ -43,7 +47,7 @@ function Navbar() {
                 <div>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <Link className="logo" to="/"><img id="logo" src={Logo}></img></Link>
-                        <Link className="nav-link" to="/liveupdates" style={{fontSize: '16px'}}>News</Link>
+                        {/* <Link className="nav-link" to="/liveupdates" style={{fontSize: '16px'}}>News</Link> */}
                         <Link className="nav-link" to="/login" style={{fontSize: '16px'}}>Login</Link>
 
 
@@ -56,7 +60,7 @@ function Navbar() {
                         <Link className="logo" to="/"><img id="logo" src={Logo}></img></Link>
                         <Link className="nav-link" onClick={() => logout()} to='/' style={{fontSize: '16px'}}>Logout</Link>
                             
-                            <Link className="nav-link" to="/liveupdates" style={{fontSize: '16px'}}>News</Link>
+                            {/* <Link className="nav-link" to="/liveupdates" style={{fontSize: '16px'}}>News</Link> */}
                             <Link className="nav-link" to="/members" style={{fontSize: '16px'}}>Discover</Link>
                             
                             

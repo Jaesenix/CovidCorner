@@ -14,9 +14,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { Grid } from '@material-ui/core';
-// import WHO from '../../assets/who.jpg';
-// import CDC from '../../assets/cdc.jpg';
-// import USA from '../../assets/usa.png';
+import Divider from '@material-ui/core/Divider';
 import "./style.css"
 
 
@@ -48,12 +46,13 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const styles= {
+const styles = {
   content: {
     fontSize: '30px',
     fontFamily: 'Nunito, sans-serif',
     color: '#353535'
-  }
+  },
+  
 };
 
 function ListItemLink(props) {
@@ -87,19 +86,19 @@ export default function ResourceReviewCard() {
 
 {/* WHO Resource Card  */}
 <Grid item xs>
-    <Card className={classes.root}>
+    {/* <Card className={classes.root}>
       <CardHeader
        
         title="World Health Organization"
        
-      />
+      /> */}
       {/* <CardMedia 
         className={classes.media}
         image={WHO}
         title="WHO"
         style={{backgroundColor: "blue"}}
       /> */}
-      <CardContent>
+      {/* <CardContent>
      
       </CardContent>
       <CardActions disableSpacing>
@@ -130,41 +129,36 @@ export default function ResourceReviewCard() {
                </List>
         </CardContent>
       </Collapse>
-    </Card>
+    </Card> */}
 
 {/* CDC Resource Card */}
+<div >
+      <List component="nav" aria-label="main mailbox folders" className="resource-card">
+        <ListItem>
+          <ListItemText primary="World Health Organization" />
+        </ListItem>
+      </List>
+      <Divider />
+      <List component="nav" aria-label="secondary mailbox folders">
+        <ListItemLink href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" target="_blank">
+          <ListItemText primary="Advice For The Public" />
+        </ListItemLink>
+        <ListItemLink href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub" target="_blank">
+          <ListItemText primary="Questions and Answers" />
+        </ListItemLink>
+        <ListItemLink href="https://www.who.int/travel-advice" target="_blank">
+          <ListItemText primary="Travel Advice" />
+        </ListItemLink>
+      </List>
+    </div>
     </Grid>
     <Grid item xs>
-     <Card className={classes.root}>
-     <CardHeader
-      
-       title="Centers for Disease Control and Prevention"
-      
-     />
-     {/* <CardMedia
-       className={classes.media}
-       image={CDC}
-       title="WHO"
-       
-     /> */}
-     <CardContent>
-    
-     </CardContent>
-     <CardActions disableSpacing>
-  
-       <IconButton
-         className={clsx(classes.expand, {
-           [classes.expandOpen]: expanded1,
-         })}
-         onClick={handleExpandClick1}
-         aria-expanded={expanded1}
-         aria-label="show more"
-       >
-         <ExpandMoreIcon />
-       </IconButton>
-     </CardActions>
-     <Collapse in={expanded1} timeout="auto" unmountOnExit>
-       <CardContent>
+    <List component="nav" aria-label="main mailbox folders" className="resource-card">
+        <ListItem>
+          <ListItemText primary="Center for Disease Control and Prevention" />
+        </ListItem>
+      </List>
+      <Divider />
        <List component="nav" aria-label="main mailbox folders">
        <ListItemLink href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/index.html" target="_blank">
  <ListItemText primary="Prevent Getting Sick" />
@@ -177,9 +171,6 @@ export default function ResourceReviewCard() {
 </ListItemLink>
       
          </List>
-       </CardContent>
-     </Collapse>
-   </Card>
    </Grid>
 
    {/* National Insititues of Health */}
