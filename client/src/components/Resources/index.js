@@ -14,9 +14,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { Grid } from '@material-ui/core';
-// import WHO from '../../assets/who.jpg';
-// import CDC from '../../assets/cdc.jpg';
-// import USA from '../../assets/usa.png';
+import Divider from '@material-ui/core/Divider';
 import "./style.css"
 
 
@@ -48,12 +46,13 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const styles= {
+const styles = {
   content: {
     fontSize: '30px',
     fontFamily: 'Nunito, sans-serif',
     color: '#353535'
-  }
+  },
+  
 };
 
 function ListItemLink(props) {
@@ -87,19 +86,19 @@ export default function ResourceReviewCard() {
 
 {/* WHO Resource Card  */}
 <Grid item xs>
-    <Card className={classes.root}>
+    {/* <Card className={classes.root}>
       <CardHeader
        
         title="World Health Organization"
        
-      />
+      /> */}
       {/* <CardMedia 
         className={classes.media}
         image={WHO}
         title="WHO"
         style={{backgroundColor: "blue"}}
       /> */}
-      <CardContent>
+      {/* <CardContent>
      
       </CardContent>
       <CardActions disableSpacing>
@@ -130,9 +129,28 @@ export default function ResourceReviewCard() {
                </List>
         </CardContent>
       </Collapse>
-    </Card>
+    </Card> */}
 
 {/* CDC Resource Card */}
+<div >
+      <List component="nav" aria-label="main mailbox folders" className="resource-card">
+        <ListItem>
+          <ListItemText primary="World Health Organization" />
+        </ListItem>
+      </List>
+      <Divider />
+      <List component="nav" aria-label="secondary mailbox folders">
+        <ListItem button>
+          <ListItemText primary="Advice For The Public" />
+        </ListItem>
+        <ListItemLink href="#simple-list">
+          <ListItemText primary="Questions and Answers" />
+        </ListItemLink>
+        <ListItemLink href="#simple-list">
+          <ListItemText primary="Travel Advice" />
+        </ListItemLink>
+      </List>
+    </div>
     </Grid>
     <Grid item xs>
      <Card className={classes.root}>
