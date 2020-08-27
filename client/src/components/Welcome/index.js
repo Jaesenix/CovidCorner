@@ -14,12 +14,15 @@ const styles = {
 
 const Welcome = () => {
   const [state] = useStoreContext();
-  const { email } = state;
+  const { email, name, mask, unemployed, household } = state;
   
     return (
       <>
         <p style={styles.welcome}>Hello, welcome to CovidCorner! We're here to help inform you of all things Covid.</p>
         <h2>Welcome {email}</h2>
+        <h2>Mask: {mask.toString()}</h2>
+        <h2>Unemployed: {unemployed}</h2>
+        <h2>Household: {household}</h2>
       </>
     )
   }

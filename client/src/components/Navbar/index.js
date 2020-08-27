@@ -12,11 +12,15 @@ function Navbar() {
     useEffect(() => {
         // Try getting our user-data, if the user is logged in, we will update our GlobalStore to refelct that
         API.checkUserInfo().then(response => {
-            const { email } = response.data;
+            const { email, name, mask, unemployed, household } = response.data;
             dispatch({
                 type: AUTH_SET_LOGGED_IN,
                 data: {
-                    email
+                    email,
+                    name,
+                    mask,
+                    unemployed,
+                    household
                 }
             })
         }).catch(err => {
