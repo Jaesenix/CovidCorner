@@ -20,9 +20,6 @@ const Welcome = () => {
       <>
         <p style={styles.welcome}>Hello, welcome to CovidCorner! We're here to help inform you of all things Covid.</p>
         <h2>Welcome {email}</h2>
-        <h2>Mask: {mask.toString()}</h2>
-        <h2>Unemployed: {unemployed}</h2>
-        <h2>Household: {household}</h2>
       </>
     )
   }

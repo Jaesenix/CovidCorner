@@ -66,7 +66,7 @@ function Signup() {
                             <input type="password" className="form-control" placeholder="Password" ref={passwordRef} />
                         </div>
                         <div className="form-group" style={styles.signupText}>
-                            <label htmlFor="exampleInputPassword1">Your Name</label>
+                            <label htmlFor="exampleInputPassword1">First Name</label>
                             <input type="name" className="form-control" placeholder="Name" ref={nameRef} />
                         </div>
                         <div class="form-group" style={styles.signupText}>
