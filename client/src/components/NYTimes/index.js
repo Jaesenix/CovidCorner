@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 
+// import CircularProgress from '@material-ui/core/CircularProgress';
+import "./style.css"
+
 class NYT extends Component {
+
+ ;
 
     state = {
         Results: [],
@@ -24,11 +29,14 @@ class NYT extends Component {
         event.preventDefault();
         this.Results(this.state.Results);
     };
+   
 
     // Map the results
+
     render = () => {
+      
         return (
-            <div>
+            <div >
                 <h3>Results</h3>
                 {this.state.Results.length ? (
                 <ul>
@@ -45,6 +53,9 @@ class NYT extends Component {
                 </ul>
                 ):(
                     <p>Results</p>
+    //                 <div>
+    //   <CircularProgress />
+    // </div>
                 )}
             </div>
 

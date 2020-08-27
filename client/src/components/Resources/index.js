@@ -140,49 +140,25 @@ export default function ResourceReviewCard() {
       </List>
       <Divider />
       <List component="nav" aria-label="secondary mailbox folders">
-        <ListItem button>
+        <ListItemLink href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" target="_blank">
           <ListItemText primary="Advice For The Public" />
-        </ListItem>
-        <ListItemLink href="#simple-list">
+        </ListItemLink>
+        <ListItemLink href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub" target="_blank">
           <ListItemText primary="Questions and Answers" />
         </ListItemLink>
-        <ListItemLink href="#simple-list">
+        <ListItemLink href="https://www.who.int/travel-advice" target="_blank">
           <ListItemText primary="Travel Advice" />
         </ListItemLink>
       </List>
     </div>
     </Grid>
     <Grid item xs>
-     <Card className={classes.root}>
-     <CardHeader
-      
-       title="Centers for Disease Control and Prevention"
-      
-     />
-     {/* <CardMedia
-       className={classes.media}
-       image={CDC}
-       title="WHO"
-       
-     /> */}
-     <CardContent>
-    
-     </CardContent>
-     <CardActions disableSpacing>
-  
-       <IconButton
-         className={clsx(classes.expand, {
-           [classes.expandOpen]: expanded1,
-         })}
-         onClick={handleExpandClick1}
-         aria-expanded={expanded1}
-         aria-label="show more"
-       >
-         <ExpandMoreIcon />
-       </IconButton>
-     </CardActions>
-     <Collapse in={expanded1} timeout="auto" unmountOnExit>
-       <CardContent>
+    <List component="nav" aria-label="main mailbox folders" className="resource-card">
+        <ListItem>
+          <ListItemText primary="Center for Disease Control and Prevention" />
+        </ListItem>
+      </List>
+      <Divider />
        <List component="nav" aria-label="main mailbox folders">
        <ListItemLink href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/index.html" target="_blank">
  <ListItemText primary="Prevent Getting Sick" />
@@ -195,9 +171,6 @@ export default function ResourceReviewCard() {
 </ListItemLink>
       
          </List>
-       </CardContent>
-     </Collapse>
-   </Card>
    </Grid>
 
    {/* National Insititues of Health */}
