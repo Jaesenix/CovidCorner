@@ -2,8 +2,8 @@ import axios from 'axios';
 
 export default {
     // This function is to check if the user is logged in, and to return their info if they are not
-    getGeoMap: () => {
-        return axios.get("/api/geolocation")
+    getTesting: (state) => {
+        return axios.get("https://covid-19-testing.github.io/locations/" + state + "/complete.json")
     },
     getArticles: () => {
         return axios.get("/api/articles")

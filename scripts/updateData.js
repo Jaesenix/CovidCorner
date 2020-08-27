@@ -1,7 +1,7 @@
 require('dotenv').config();
 const axios = require('axios');
 const db = require('../models');
-const schedule = require('node-schedule')
+// const schedule = require('node-schedule')
 
 // const update = schedule.scheduleJob('00 * * * *', function(){
 
