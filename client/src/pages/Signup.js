@@ -24,6 +24,7 @@ function Signup() {
     const maskRef = useRef();
     const unemployedRef = useRef();
     const householdRef = useRef();
+    const nameRef = useRef();
     const [, dispatch] = useStoreContext();
 
     const handleSignup = (event) => {
@@ -33,7 +34,8 @@ function Signup() {
             password: passwordRef.current.value,
             mask: maskRef.current.value,
             unemployed: unemployedRef.current.value,
-            household: householdRef.current.value
+            household: householdRef.current.value,
+            name: nameRef.current.value
         };
         API.signup(signupData).then(response => {
             const { email } = response.data;
@@ -63,9 +65,13 @@ function Signup() {
                             <label htmlFor="exampleInputPassword1">Password</label>
                             <input type="password" className="form-control" placeholder="Password" ref={passwordRef} />
                         </div>
+                        <div className="form-group" style={styles.signupText}>
+                            <label htmlFor="exampleInputPassword1">Your Name</label>
+                            <input type="name" className="form-control" placeholder="Name" ref={nameRef} />
+                        </div>
                         <div class="form-group" style={styles.signupText}>
                             <label for="exampleFormControlSelect1">Do you follow government recommendations on mask usage?</label>
-                            <select class="form-control" ref={maskRef}>
+                            <select class="form-control" placeholder="Example input placeholder" ref={maskRef}>
                                 <option value={true}>Yes</option>
                                 <option value={false}>No</option>
                             </select>
