@@ -38,12 +38,12 @@ class NYT extends Component {
             {this.state.Results.map((article) => (
               <div>
                 <li key={article._id}>
-                  <h5 class="h5nytimes">{article.snippet}</h5>
+                  <h5 className="h5nytimes">{article.snippet}</h5>
                   <img
                     src={`http://static01.nyt.com/${article.multimedia[2].url}`}
                     alt="article img"
                   />
-                  <p class="pnytimes">{article.lead_paragraph}</p>
+                  <p className="pnytimes">{article.lead_paragraph}</p>
                   <a href={article.web_url} target="_blank">
                     View
                   </a>
