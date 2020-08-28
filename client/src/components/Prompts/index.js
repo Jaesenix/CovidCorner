@@ -51,7 +51,7 @@ return (
           </Link>
         </Card>
         <Card style={styles.statCards}>
-        <Link className="prompt-link" to="/liveupdates"> <CardContent>
+        <Link className="prompt-link" to="/news"> <CardContent>
         <FontAwesomeIcon icon={faNewspaper} style={styles.icons} size="2x"/><br></br>
           <h5 style={styles.promptText}>Related News</h5>
           </CardContent>

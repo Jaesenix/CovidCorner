@@ -1,12 +1,12 @@
 import React from "react";
 import NYT from "../components/NYTimes";
 
-function LiveUpdates () {
+function News () {
     return (
        <div>
-           <NYT></NYT>
+           <NYT />
        </div>
     )
 }
 
-export default LiveUpdates;
+export default News;
