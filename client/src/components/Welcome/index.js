@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import { useStoreContext } from '../../utils/GlobalStore';
+
 
 const styles = {
 
@@ -18,8 +19,7 @@ const Welcome = () => {
   
     return (
       <>
-        <p style={styles.welcome}>Hello, welcome to CovidCorner! We're here to help inform you of all things Covid.</p>
-        <h2>Welcome {name}</h2>
+        <p style={styles.welcome}>Hello {email}, welcome to CovidCorner!</p>
       </>
     )
   }

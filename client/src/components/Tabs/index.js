@@ -92,11 +92,11 @@ export default function VerticalTabs() {
         <Tab label="Additional Resources" {...a11yProps(4)} style={styles.tabLabel}/>
         
       </Tabs>
-      <TabPanel className="panel" value={value} index={0}>
+      <TabPanel className="panel" value={value} index={0} style={{backgroundColor: '#F5F5F5'}}>
        <Welcome />
       </TabPanel>
 
-      <TabPanel className="panel" value={value} index={1}>
+      <TabPanel className="panel" value={value} index={1} style={{backgroundColor: '#F5F5F5'}}>
       <Overview />
       </TabPanel>
       
