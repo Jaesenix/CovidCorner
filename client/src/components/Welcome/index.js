@@ -1,6 +1,8 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useStoreContext } from '../../utils/GlobalStore';
-import Mask from '../Mask';
+import { AUTH_SET_LOGGED_IN } from "../../utils/actions"
+import API from '../../utils/API'
+import Masks from '../Masks';
 import Unemployed from '../Unemployed';
 import Household from '../Household';
 
@@ -17,16 +19,33 @@ const styles = {
 
 
 const Welcome = () => {
-  const [state] = useStoreContext();
-  const { email, name, mask, unemployed, household } = state;
+  const [state, dispatch] = useStoreContext();
+  const { name, mask, unemployed, household } = state;
+  useEffect(() => {
+    API.checkUserInfo().then(response => {
+      const { name, mask, unemployed, household } = response.data;
+      dispatch({
+        type: AUTH_SET_LOGGED_IN,
+        data: {
+          name,
+          mask,
+          unemployed,
+          household
+        }
+      })
+    })
+  }, []);
   
     return (
       <>
-        <p style={styles.welcome}>Hello {email}, welcome to CovidCorner!</p>
-        {!mask && <Mask />}
-        {unemployed && <Unemployed />}
-        {household && <Household />}
-        
+        <div>
+          <p style={styles.welcome}>Hello {name}, welcome to CovidCorner!</p>
+        </div>
+        <div>
+          {!mask && <Masks />}
+          {unemployed && <Unemployed />}
+          {household && <Household />}
+        </div>
       </>
     )
   }
