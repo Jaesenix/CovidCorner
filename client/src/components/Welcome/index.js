@@ -1,5 +1,7 @@
 import React, {useEffect} from "react";
 import { useStoreContext } from '../../utils/GlobalStore';
+import UN1 from '../../assets/UN1.jpg'
+import './style.css'
 import { AUTH_SET_LOGGED_IN } from "../../utils/actions"
 import API from '../../utils/API'
 import Masks from '../Masks';
@@ -36,17 +38,30 @@ const Welcome = () => {
     })
   }, []);
   
+  
+  
     return (
-      <>
+      
         <div>
           <p style={styles.welcome}>Hello {name}, welcome to CovidCorner!</p>
+          <div className="card-group">
+        <div className="card ">
+          <img src={UN1} className="card-img-top welcome-top" alt="..." /> 
+        </div>
+        <div class="card">
+          <img src={UN1} className="card-img-top welcome-top" alt="..." /> 
+        </div>
+        <div class="card">
+          <img src={UN1} className="card-img-top welcome-top" alt="..." /> 
+        </div>
         </div>
         <div>
           {!mask && <Masks />}
           {unemployed && <Unemployed />}
           {household && <Household />}
         </div>
-      </>
+        </div>
+      
     )
   }
 
