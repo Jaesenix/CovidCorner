@@ -10,6 +10,9 @@ class NYT extends Component {
     loading: true,
   };
 
+<<<<<<< HEAD
+    ;
+=======
   // Get results from API
   componentDidMount() {
     API.getArticles()
@@ -20,6 +23,7 @@ class NYT extends Component {
       })
       .catch((err) => console.error(err));
   }
+>>>>>>> 61ae084d5c716a4979ba740640212a05d795e333
 
   // Search the NY Times API for `this.state.search`
   handleChange = (event) => {
@@ -29,6 +33,57 @@ class NYT extends Component {
 
   // Map the results
 
+<<<<<<< HEAD
+    // Search the NY Times API for `this.state.search`
+    handleChange = event => {
+        event.preventDefault();
+        this.Results(this.state.Results);
+    };
+
+
+    // Map the results
+
+    render = () => {
+
+        return (
+            <div className="container nyt-container">
+             {/* <h3>Results</h3> */}
+        {this.state.Results.length ? (
+          <ul className="list-unstyled">
+            {this.state.Results.map((article) => (
+               <div className="card nyt-card">
+               <div className="card-body">
+                <li className="media " key={article._id}>
+                  <div>
+                    <img
+                    src={`http://static01.nyt.com/${article.multimedia[2].url}`}
+                    alt="article img"
+                    className="mr-3 align-self-start"
+                  /> 
+                  <h4 className="mt-0">{article.snippet}</h4>
+                  </div>
+                 
+                 <p id="article-paragraph">{article.lead_paragraph}</p> 
+                 <br></br>
+                 <br></br>
+                  <a className="content" href={article.web_url} target="_blank">
+                    View Full Article
+                  </a>
+                </li>
+                </div>
+</div>
+            ))}
+            
+          </ul>
+       
+        ) : (
+          <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+          
+          )}
+        </div>
+=======
   render = () => {
     return (
       <div id="nytimes">
@@ -59,6 +114,7 @@ class NYT extends Component {
           // </div>
         )}
       </div>
+>>>>>>> 61ae084d5c716a4979ba740640212a05d795e333
     );
   };
 }

@@ -1,4 +1,33 @@
+<<<<<<< HEAD
+.mr-3 {
+  height: 200px;
+  width: 200px;
+  float: left;
+  margin-right: 10px;
+}
+
+.nyt-container {
+  width: 80%;
+}
+
+.content {
+  float: right;
+  
+}
+
+.nyt-card {
+  margin-bottom: 25px;
+  font-family: 'Nunito', sans-serif;
+  justify-content: center;
+}
+
+#article-paragraph {
+  font-size: 16px;
+}
+/* div {
+=======
 .nytimes {
+>>>>>>> 61ae084d5c716a4979ba740640212a05d795e333
   background-color: #f5f5f5;
   width: 70%;
   height: 70%;
@@ -12,7 +41,7 @@
 }
 .pnytimes {
   color: #1e3748;
-}
+} */
 /* .progress {
     display: 'inline-block';
     align-items: 'center';
