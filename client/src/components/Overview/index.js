@@ -66,7 +66,7 @@ export default function Overview() {
           <Tab label="Treatment" {...a11yProps(2)} style={{fontSize: '14px'}}/>
         </Tabs>
       </AppBar>
-      <TabPanel className="body" value={value} index={0} style={{bacgroundColor: '#F5F5F5'}}>
+      <TabPanel className="body" value={value} index={0} style={{backgroundColor: '#F5F5F5'}}>
         <p className="body">COVID-19 affects different people in different ways. Infected people have had a wide range of symptoms reported – from mild symptoms to severe illness.</p>
         <p className="body">Symptoms may appear 2-14 days after exposure to the virus. People with these symptoms may have COVID-19:</p>
         <ul className="body">

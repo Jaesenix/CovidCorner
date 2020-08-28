@@ -19,7 +19,7 @@ const Welcome = () => {
     return (
       <>
         <p style={styles.welcome}>Hello, welcome to CovidCorner! We're here to help inform you of all things Covid.</p>
-        <h2>Welcome {email}</h2>
+        <h2>Welcome {name}</h2>
       </>
     )
   }
