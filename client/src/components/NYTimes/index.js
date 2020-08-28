@@ -10,13 +10,17 @@ class NYT extends Component {
     loading: true,
   };
 
-  // Search the NY Times API for `this.state.search`
-  handleChange = (event) => {
-    event.preventDefault();
-    this.Results(this.state.Results);
-  };
+  // Get results from API
+  componentDidMount() {
+    API.getArticles()
+      .then((res) => {
+        console.log(res.data.response.docs);
+        console.log(res.data.response.docs[1].multimedia[2].url);
+        this.setState({ Results: res.data.response.docs, loading: false });
+      })
+      .catch((err) => console.error(err));
+  }
 
-  // Map the results
 
     // Search the NY Times API for `this.state.search`
     handleChange = event => {
@@ -40,7 +44,7 @@ class NYT extends Component {
                 <li className="media " key={article._id}>
                   <div>
                     <img
-                    src={`http://static01.nyt.com/${article.multimedia[2].url}`}
+                    src={`http://static01.nyt.com/${article.multimedia[10].url}`}
                     alt="article img"
                     className="mr-3 align-self-start"
                   /> 
