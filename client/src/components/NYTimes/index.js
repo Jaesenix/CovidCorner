@@ -10,21 +10,6 @@ class NYT extends Component {
     loading: true,
   };
 
-<<<<<<< HEAD
-    ;
-=======
-  // Get results from API
-  componentDidMount() {
-    API.getArticles()
-      .then((res) => {
-        console.log(res.data.response.docs);
-        console.log(res.data.response.docs[1].multimedia[2].url);
-        this.setState({ Results: res.data.response.docs, loading: false });
-      })
-      .catch((err) => console.error(err));
-  }
->>>>>>> 61ae084d5c716a4979ba740640212a05d795e333
-
   // Search the NY Times API for `this.state.search`
   handleChange = (event) => {
     event.preventDefault();
@@ -33,7 +18,6 @@ class NYT extends Component {
 
   // Map the results
 
-<<<<<<< HEAD
     // Search the NY Times API for `this.state.search`
     handleChange = event => {
         event.preventDefault();
@@ -83,38 +67,6 @@ class NYT extends Component {
           
           )}
         </div>
-=======
-  render = () => {
-    return (
-      <div id="nytimes">
-        <h3>Results</h3>
-        {this.state.Results.length ? (
-          <ul>
-            {this.state.Results.map((article) => (
-              <div>
-                <li key={article._id}>
-                  <h5 className="h5nytimes">{article.snippet}</h5>
-                  <img
-                    src={`http://static01.nyt.com/${article.multimedia[2].url}`}
-                    alt="article img"
-                  />
-                  <p className="pnytimes">{article.lead_paragraph}</p>
-                  <a href={article.web_url} target="_blank">
-                    View
-                  </a>
-                </li>
-              </div>
-            ))}
-            ;
-          </ul>
-        ) : (
-          <p>Results</p>
-          //                 <div>
-          //   <CircularProgress />
-          // </div>
-        )}
-      </div>
->>>>>>> 61ae084d5c716a4979ba740640212a05d795e333
     );
   };
 }
