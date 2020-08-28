@@ -6,7 +6,7 @@ import "./style.css"
 
 class NYT extends Component {
 
- ;
+    ;
 
     state = {
         Results: [],
@@ -29,38 +29,52 @@ class NYT extends Component {
         event.preventDefault();
         this.Results(this.state.Results);
     };
-   
+
 
     // Map the results
 
     render = () => {
-      
-        return (
-            <div >
-                <h3>Results</h3>
-                {this.state.Results.length ? (
-                <ul>
-                    {this.state.Results.map(article => (
-                        <div>
-                            <li key={article._id}>
-                                <h5>{article.snippet}</h5>
-                                <img src={`http://static01.nyt.com/${article.multimedia[2].url}`} alt="article img" />
-                                <p>{article.lead_paragraph}</p>
-                                <a href={article.web_url} target="_blank">View</a>
-                            </li>
-                        </div>
-                    ))};
-                </ul>
-                ):(
-                    <p>Results</p>
-    //                 <div>
-    //   <CircularProgress />
-    // </div>
-                )}
-            </div>
 
-        )
-    }
+        return (
+            <div className="container nyt-container">
+             {/* <h3>Results</h3> */}
+        {this.state.Results.length ? (
+          <ul className="list-unstyled">
+            {this.state.Results.map((article) => (
+               <div className="card nyt-card">
+               <div className="card-body">
+                <li className="media " key={article._id}>
+                  <div>
+                    <img
+                    src={`http://static01.nyt.com/${article.multimedia[2].url}`}
+                    alt="article img"
+                    className="mr-3 align-self-start"
+                  /> 
+                  <h4 className="mt-0">{article.snippet}</h4>
+                  </div>
+                 
+                 <p id="article-paragraph">{article.lead_paragraph}</p> 
+                 <br></br>
+                 <br></br>
+                  <a className="content" href={article.web_url} target="_blank">
+                    View Full Article
+                  </a>
+                </li>
+                </div>
+</div>
+            ))}
+            
+          </ul>
+       
+        ) : (
+          <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+          
+          )}
+        </div>
+    );
+  };
 }
 
 export default NYT;
