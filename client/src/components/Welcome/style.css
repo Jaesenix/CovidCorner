@@ -1,4 +1,23 @@
 .welcome-top {
- height: 150px;
- width: 150px;
+ height: 250px;
+ width: 275px;
+ margin-bottom: 40px;
 }
+
+.welcome-top2 {
+    height: 250px;
+    width: 250px;
+    margin-bottom: 40px;
+   }
+
+   .welcome-container{
+       align-items: center;
+       justify-items: center;
+       justify-items: center;
+       align-content: center;
+       text-align: center;
+   }
+
+   .data-cards {
+       margin-bottom: 15px;
+   }

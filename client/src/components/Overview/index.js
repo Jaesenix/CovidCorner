@@ -41,13 +41,7 @@ function a11yProps(index) {
   };
 }
 
-const styles = {
-  topTab: {
-    fontSize: '18px',
-    fontFamily: 'Nunito, sans-serif',
-    color: '#8F8F8F'
-  }
-}; 
+ 
 export default function Overview() {
  
   const [value, setValue] = React.useState(0);

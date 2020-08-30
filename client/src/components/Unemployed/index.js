@@ -4,7 +4,7 @@ import "./style.css"
 
 const Unemployed =() => {
   return (
-      <div className="card mb-3 unemployed-card text-center" style={{width: '80%'}}>
+      <div className="card mb-3 unemployed-card text-center mx-auto" style={{width: '80%'}}>
         <img src={unemployedImg} className="card-img-top unemployed-card-top align-items-center text-center" alt="Masks are important" />
           <div className="card-body">
             <h5 className="card-title">Unemployment Help</h5>

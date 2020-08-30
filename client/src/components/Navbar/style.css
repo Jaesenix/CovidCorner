@@ -42,4 +42,8 @@
 
 .navbar {
     background-color: #3B6F91;
+    /* position: fixed;
+    top: 0;
+    width: 100%;
+    padding-bottom: 20px; */
 }

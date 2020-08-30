@@ -100,15 +100,15 @@ export default function VerticalTabs() {
       <Overview />
       </TabPanel>
       
-      <TabPanel className="panel" value={value} index={2}>
+      <TabPanel className="panel" value={value} index={2} style={{backgroundColor: '#F5F5F5'}}>
       <Assessment />
       </TabPanel>
 
-      <TabPanel value={value} index={3}>
+      <TabPanel value={value} index={3} style={{backgroundColor: '#F5F5F5'}}>
        Find a Testing Center
       </TabPanel>
 
-      <TabPanel className="panel" value={value} index={4}>
+      <TabPanel className="panel" value={value} index={4} style={{backgroundColor: '#F5F5F5'}}>
       <ResourceCard />
       </TabPanel>
 

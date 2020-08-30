@@ -1,8 +1,9 @@
 
-
 .resource-card {
         margin-right: 15px;
         font-size: 20px;
+        border: 1px solid #8F8F8F;
+        border-radius: 5px;
 }
 
 .card-header {
@@ -15,6 +16,10 @@
 .card-text {
     font-size: 14px;
     font-family: 'Nunito', sans-serif;
-    background: 'red'
+    color: #353535
+}
+
+.list-group-item:hover {
+background-color: plum;
 }
 
