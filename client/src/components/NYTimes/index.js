@@ -15,62 +15,51 @@ class NYT extends Component {
     API.getArticles()
       .then((res) => {
         console.log(res.data.response.docs);
-        console.log(res.data.response.docs[1].multimedia[2].url);
+        console.log(res.data.response.docs[1].multimedia[10].url);
         this.setState({ Results: res.data.response.docs, loading: false });
       })
       .catch((err) => console.error(err));
   }
 
-
-    // Search the NY Times API
-    handleChange = event => {
-        event.preventDefault();
-        this.Results(this.state.Results);
-    };
-
-
-    // Map the results
-
-    render = () => {
-
-        return (
-            <div className="container nyt-container">
-             {/* <h3>Results</h3> */}
+  // Map the results
+  render = () => {
+    return (
+      <div className="container nyt-container">
         {this.state.Results.length ? (
           <ul className="list-unstyled">
-            {this.state.Results.map((article) => (
-               <div className="card nyt-card">
-               <div className="card-body">
-                <li className="media " key={article._id}>
-                  <div>
-                    <img
-                    src={`http://static01.nyt.com/${article.multimedia[1].url}`}
-                    alt="article img"
-                    className="mr-3 align-self-start"
-                  /> 
-                  <h4 className="mt-0">{article.snippet}</h4>
-                  </div>
-                 
-                 <p id="article-paragraph">{article.lead_paragraph}</p> 
-                 <br></br>
-                 <br></br>
-                  <a className="content" href={article.web_url} target="_blank" rel="noopener noreferrer">
-                    View Full Article
+            {this.state.Results.map(article => (
+              <div className="card nyt-card">
+                <div className="card-body">
+                  <li className="media " key={article._id}>
+                    <div>
+                      {article.multimedia.length ? (
+                        <img
+                          src={`http://static01.nyt.com/${article.multimedia[10].url}`}
+                          alt="article img"
+                          className="mr-3 align-self-start"
+                        />
+                      ) : (
+                        <></>
+                      )}
+                      <h4 className="mt-0">{article.snippet}</h4>
+                    </div>
+                    <p id="article-paragraph">{article.lead_paragraph}</p>
+                    <br></br>
+                    <br></br>
+                    <a className="content" href={article.web_url} target="_blank" rel="noopener noreferrer">
+                      View Full Article
                   </a>
-                </li>
+                  </li>
                 </div>
-</div>
+              </div>
             ))}
-            
           </ul>
-       
         ) : (
-          <div class="spinner-border" role="status">
-          <span class="sr-only">Loading...</span>
-        </div>
-          
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
           )}
-        </div>
+      </div>
     );
   };
 }
