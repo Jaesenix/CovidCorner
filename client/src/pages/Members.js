@@ -3,7 +3,9 @@ import VerticleTabs from "../components/Tabs"
 
 function Members(){
     return (
+      <div>
       <VerticleTabs />
+      </div>
     );
 }
 

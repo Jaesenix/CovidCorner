@@ -1,6 +1,31 @@
-# Project 2 Template
+# Covid Corner
 
-## BEFORE YOU BEGIN 
+## Description
+
+
+### User Story
+```
+AS A United States resident
+I WANT to easily access Covid-19 data at the state and county level, see news updates, find resources relevant to my circumstances, check my symptoms, and find a testing center nearby
+SO THAT I can prevent the spread of the virus
+```
+
+## Table of Contents
+[Technologies](#technologies)
+
+[Installation](#installation)
+
+[Usage](#usage)
+
+[Collaborators](#collaborators)
+
+# Technologies
+The front-end of the application uses React and API's from 
+
+The back-end of the application utilizes node.js powered by express and uses sequelize to interact with a mySQL database. The application also uses a passport middleware for authenticating users.
+
+# Installation
+## For local installation
 1. Run `db/schema.sql` to create your database
 2. Make sure to create a `.env` file and copy the contents of `.env.example` into it.
 3. In the `.env` file replace the ???? for SESSION_SECRET and set your db credentials in LOCALDB_URL
@@ -9,24 +34,12 @@ it should look something like this
 SESSION_SECRET=SomethingBesidesKeyboardCat
 LOCALDB_URL=mysql://root:dbpassword@localhost:3306/Project2Dev
 ```
-**NOTE** Do *not* check in your `.env` file into source control, it is particular to *your* environment.
 
-## Scripts
-### Install
-    npm install
-### Run (production)
-    npm start
-### Run (dev)
-    npm run watch
-### Tests (includes linting)
-    npm test
-### Linting by itself (only detects errors)
-    npm run lint
-### Autofix linting errors where pssible (Note: this will not necessarily fix all of them)
-    npm run fix
+# Usage
 
-    
-### Associated Links (requires you to be logged into github):
-[Project Requirements](https://github.com/the-Coding-Boot-Camp-at-UT/UTA-AUS-FSF-FT-06-2020-U-C/blob/master/01-Class-Content/15-Project-2/02-Homework/README.md
+# Collaborators
+@jacquelineadean
+@jwhityoung
+@jaesenix
+@brownjessa
 
-[Deployment w/ Sequelize](https://github.com/the-Coding-Boot-Camp-at-UT/UTA-AUS-FSF-FT-06-2020-U-C/blob/master/01-Class-Content/14-Full-Stack/04-Supplemental/SequelizeHerokuDeploymentProcess.md)
