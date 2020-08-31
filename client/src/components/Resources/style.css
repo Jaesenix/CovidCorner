@@ -2,24 +2,23 @@
 .resource-card {
         margin-right: 15px;
         font-size: 20px;
-        border: 1px solid #8F8F8F;
-        border-radius: 5px;
+        /* border: 1px solid #8F8F8F;
+        border-radius: 5px; */
 }
 
 .card-header {
     text-align: center;
     font-size: 18px;
     font-family: 'Nunito', sans-serif;
-    color: #F5F5F5
+    color: #F5F5F5;
+   
 }
 
 .card-text {
     font-size: 14px;
     font-family: 'Nunito', sans-serif;
-    color: #353535
+    color: #353535;
+    text-align: center;
 }
 
-.list-group-item:hover {
-background-color: plum;
-}
 

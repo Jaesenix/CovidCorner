@@ -1,7 +1,8 @@
 .unemployed-card {
-    border: #3B6F91 solid 2px;
+    border: #4D8B93 solid 2px;
     border-radius: 25px;
     padding: 10px;
+    margin-bottom: 15px;
 
 }
 
@@ -9,6 +10,5 @@
     border-radius: 25px;
 }
 
-.btn {
-    margin-right: 10px;
-}
+
+

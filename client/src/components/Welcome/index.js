@@ -15,10 +15,9 @@ const styles = {
 
 
   welcome: {
-    fontSize: '30px',
+    fontSize: '25px',
     fontFamily: 'Nunito, sans-serif',
     color: '#353535',
-    textAlign: 'center'
   }
 };
 

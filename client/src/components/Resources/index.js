@@ -12,7 +12,7 @@ export default function ResourceReviewCard() {
       <div className="row">
         <div className="col-md-3" >
           <div className="list-group resource-card" >
-            <a href="https://www.who.int/" className="list-group-item list-group-item-action active card-header" style={{ backgroundColor: '#8F8F8F' }}>
+            <a href="https://www.who.int/" className="list-group-item list-group-item-action active card-header" style={{ backgroundColor: '#4D8B93' }}>
               WHO</a>
     
             <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" target="_blank" rel="noopener noreferrer" className="list-group-item list-group-item-action card-text" style={{ backgroundColor: '#F5F5F5' }}>Advice for the Public</a>
@@ -23,7 +23,7 @@ export default function ResourceReviewCard() {
 
         <div className="col-md-3" >
           <div className="list-group resource-card" >
-            <a href="https://www.who.int/" className="list-group-item list-group-item-action active card-header" style={{ backgroundColor: '#8F8F8F' }}>
+            <a href="https://www.who.int/" className="list-group-item list-group-item-action active card-header" style={{ backgroundColor: '#4D8B93' }}>
               CDC
     </a>
             <a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/index.html" target="_blank" rel="noopener noreferrer" className="list-group-item list-group-item-action card-text" style={{ backgroundColor: '#F5F5F5' }} >Prevent Getting Sick</a>
@@ -34,7 +34,7 @@ export default function ResourceReviewCard() {
 
         <div className="col-md-3" >
           <div className="list-group resource-card" >
-            <a href="https://www.who.int/" className="list-group-item list-group-item-action active card-header" style={{ backgroundColor: '#8F8F8F' }}>
+            <a href="https://www.who.int/" className="list-group-item list-group-item-action active card-header" style={{ backgroundColor: '#4D8B93' }}>
               U.S. Government
     </a>
     

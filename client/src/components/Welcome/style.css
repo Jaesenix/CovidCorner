@@ -10,14 +10,26 @@
     margin-bottom: 40px;
    }
 
-   .welcome-container{
-       align-items: center;
-       justify-items: center;
-       justify-items: center;
-       align-content: center;
-       text-align: center;
+   .data-cards {
+       margin-right: auto;
+       margin-left: auto;
    }
 
-   .data-cards {
-       margin-bottom: 15px;
+   .welcome-btn {
+    text-transform: none;
+    background-color: #4D8B93;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    margin-right: 10px;
+   }
+
+   .user-card {
+       color: #353535;
+       font-family: 'Nunito', sans-serif;
+
+   }
+
+   .welcome-contatiner {
+  
    }

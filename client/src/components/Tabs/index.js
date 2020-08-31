@@ -86,7 +86,7 @@ export default function VerticalTabs() {
         className={classes.tabs}
       >
         <Tab label="Welcome" {...a11yProps(0)} style={styles.tabLabel}/>
-        <Tab id="tabLabel" label="Overview" {...a11yProps(1)} style={styles.tabLabel}/>
+        <Tab id="tabLabel" label="Symptoms, Prevention and Treatment" {...a11yProps(1)} style={styles.tabLabel}/>
         <Tab label="Self-Assessment" {...a11yProps(2)} style={styles.tabLabel}/>
         <Tab label="Find a Testing Center" {...a11yProps(3)} style={styles.tabLabel}/>
         <Tab label="Additional Resources" {...a11yProps(4)} style={styles.tabLabel}/>
