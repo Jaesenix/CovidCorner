@@ -7,5 +7,5 @@ export const List = ({ children }) => (
 );
   
 export function ListItem({ children }) {
-    return <li className="list-group-item">{children}</li>;
+    return <li className="list-group-item" style={{backgroundColor: '#F5F5F5'}}>{children}</li>;
 }

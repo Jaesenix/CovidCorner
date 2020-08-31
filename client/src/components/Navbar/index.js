@@ -19,7 +19,7 @@ function Navbar() {
     }
 
     return (
-        <div className="navbar  fixed-top navbar-dark bg-dark">
+        <div className="navbar navbar-top sticky-top navbar-light bg-white">
             {!userLoggedIn ? (
                 // if the user is Logged out
                 <div>

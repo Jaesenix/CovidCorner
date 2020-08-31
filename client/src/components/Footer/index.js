@@ -1,10 +1,11 @@
 import React from "react";
+import "./style.css"
 
 
 function Footer () {
     return (
-        <nav className="navbar navbarfooter">
-        <a className="navbar-brand mx-auto">&copy; 2020 Copyright: J<sup>4</sup></a>
+        <nav className="navbar navbar-bottom">
+        <p className="navbar-brand mx-auto footer" style={{alignItems: 'center'}}>&copy; 2020 Copyright: J<sup>4</sup></p>
       </nav>
     )
 }

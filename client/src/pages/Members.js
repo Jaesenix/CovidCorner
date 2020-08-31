@@ -3,7 +3,7 @@ import VerticleTabs from "../components/Tabs"
 
 function Members(){
     return (
-      <div>
+      <div style={{marginTop: "80px"}}>
       <VerticleTabs />
       </div>
     );

@@ -4,6 +4,7 @@ import Map from '../components/Map';
 import Stats from '../components/Stats';
 import Prompts from '../components/Prompts';
 
+
 const styles = {
   container: {
     marginLeft: 'auto', 
@@ -28,7 +29,7 @@ document.body.style.backgroundColor = "#F5F5F5";
 function Home () {
     return (
         
-       <div>
+       <div style={{marginTop: "80px"}}>
       <Grid container style={styles.container}>
         <Grid item xs={2}>
          <Stats />

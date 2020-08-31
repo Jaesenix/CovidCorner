@@ -11,6 +11,7 @@ import SignUp from "./pages/Signup";
 import Members from "./pages/Members";
 import Home from "./pages/Home";
 
+
 function App() {
   const [state, dispatch] = useStoreContext();
   useEffect(() => {
@@ -37,6 +38,8 @@ function App() {
     <Router>
       <div>
         <Navbar userLoggedIn={state.userLoggedIn} />
+</div>
+<div>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
@@ -45,6 +48,7 @@ function App() {
           <Route exact path="/members" component={Members} />
         </Switch>
       </div>
+     
     </Router>
   );
 }
