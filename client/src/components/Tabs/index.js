@@ -51,7 +51,7 @@ const styles = {
   tabLabel: {
     fontSize: '16px',
     fontFamily: 'Nunito, sans-serif',
-    color: '#353535'
+    color: '#353535',
   },
 };
 
@@ -107,8 +107,7 @@ export default function VerticalTabs() {
       </TabPanel>
 
       <TabPanel value={value} index={3} style={{backgroundColor: '#F5F5F5'}}>
-       Find a Testing Center
-       <TestingCenter />
+       <TestingCenter/>
       </TabPanel>
 
       <TabPanel className="panel" value={value} index={4} style={{backgroundColor: '#F5F5F5'}}>

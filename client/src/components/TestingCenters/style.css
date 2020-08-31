@@ -1,0 +1,10 @@
+.testing-center {
+    width: 80%;
+    float: right;
+    position: absolute;
+}
+
+.no-results {
+    color: #18252D;
+    font-family: 'Nunito', sans-serif
+}
