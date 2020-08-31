@@ -4,6 +4,7 @@ import API from "../utils/API";
 import { AUTH_SET_LOGGED_IN } from "../utils/actions";
 import { useStoreContext } from '../utils/GlobalStore';
 
+
 const styles = {
     login: {
       fontFamily: 'Nunito, sans-serif',
@@ -48,7 +49,7 @@ function Login() {
 
 
     return <div>
-        <div className="container">
+        <div className="container" style={{marginTop: "80px"}}>
             <div className="row">
                 <div className="col-md-6 col-md-offset-3">
                     <h2 style={styles.login}>Login</h2>

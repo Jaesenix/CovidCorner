@@ -44,7 +44,7 @@ class NYT extends Component {
                 <li className="media " key={article._id}>
                   <div>
                     <img
-                    src={`http://static01.nyt.com/${article.multimedia[10].url}`}
+                    src={`http://static01.nyt.com/${article.multimedia[1].url}`}
                     alt="article img"
                     className="mr-3 align-self-start"
                   /> 

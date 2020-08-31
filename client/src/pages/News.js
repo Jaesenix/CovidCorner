@@ -3,7 +3,7 @@ import NYT from "../components/NYTimes";
 
 function News () {
     return (
-       <div>
+       <div style={{marginTop: "80px"}}>
            <NYT />
        </div>
     )
