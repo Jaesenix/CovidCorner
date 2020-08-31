@@ -59,8 +59,9 @@ class TestingCenter extends Component {
                                 />
                             ))}
                         </List> 
-                        ) : (
-                            <h2 className="no-results">No results</h2>
+                        ) : ( 
+                            <>
+                            </>
                         )}
                     </div>
                 </div>
