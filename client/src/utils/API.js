@@ -22,5 +22,8 @@ export default {
     },
     getData: () => {
         return axios.get("/api/map_data");
+    },
+    getTestingCenters: (location) => {
+        return axios.get("https://covid-19-testing.github.io/locations/" + location + "/complete.json")
     }
 }
