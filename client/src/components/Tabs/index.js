@@ -10,6 +10,7 @@ import ResourceCard from "../Resources";
 import Overview from  "../Overview"
 import "./style.css"
 import Welcome from "../Welcome"
+import TestingCenter from "../TestingCenters"
 
 
 
@@ -107,6 +108,7 @@ export default function VerticalTabs() {
 
       <TabPanel value={value} index={3} style={{backgroundColor: '#F5F5F5'}}>
        Find a Testing Center
+       <TestingCenter />
       </TabPanel>
 
       <TabPanel className="panel" value={value} index={4} style={{backgroundColor: '#F5F5F5'}}>

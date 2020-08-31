@@ -22,7 +22,7 @@ class NYT extends Component {
   }
 
 
-    // Search the NY Times API for `this.state.search`
+    // Search the NY Times API
     handleChange = event => {
         event.preventDefault();
         this.Results(this.state.Results);
