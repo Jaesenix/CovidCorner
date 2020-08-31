@@ -3,6 +3,7 @@ import API from '../../utils/API';
 import SearchForm from '../SearchForm';
 import { List } from '../SearchResults';
 import Center from '../Center';
+import "./style.css"
 
 class TestingCenter extends Component {
     constructor(props) {
@@ -36,7 +37,7 @@ class TestingCenter extends Component {
     // Map the results
     render() {
         return (
-            <div>
+            <div className="testing-center"> 
                 <div>
                     <SearchForm
                         handleFormSubmit={this.handleFormSubmit}
@@ -58,9 +59,14 @@ class TestingCenter extends Component {
                                 />
                             ))}
                         </List> 
+<<<<<<< HEAD
                         ) : ( 
                             <>
                             </>
+=======
+                        ) : (
+                            <h2 className="no-results">No results</h2>
+>>>>>>> 384ee5a5a785d8468e669f177087d9e8ed99572c
                         )}
                     </div>
                 </div>
