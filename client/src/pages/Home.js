@@ -29,7 +29,7 @@ document.body.style.backgroundColor = "#F5F5F5";
 function Home () {
     return (
         
-       <div style={{marginTop: "80px"}}>
+       <div style={{marginTop: "60px"}}>
       <Grid container style={styles.container}>
         <Grid item xs={2}>
          <Stats />
