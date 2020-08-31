@@ -49,7 +49,7 @@ function Login() {
 
 
     return <div>
-        <div className="container" style={{marginTop: "80px"}}>
+        <div className="container" style={{marginTop: "60px"}}>
             <div className="row">
                 <div className="col-md-6 col-md-offset-3">
                     <h2 style={styles.login}>Login</h2>
