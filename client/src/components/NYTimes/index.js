@@ -27,7 +27,6 @@ class NYT extends Component {
       <div className="container nyt-container">
         {this.state.Results.length ? (
           <ul className="list-unstyled">
-<<<<<<< HEAD
             {this.state.Results.map(article => (
               <div className="card nyt-card">
                 <div className="card-body">
@@ -49,26 +48,6 @@ class NYT extends Component {
                     <br></br>
                     <a className="content" href={article.web_url} target="_blank" rel="noopener noreferrer">
                       View Full Article
-=======
-            {this.state.Results.map((article) => (
-               <div className="card nyt-card">
-               <div className="card-body">
-                <li className="media " key={article._id}>
-                  <div>
-                    <img
-                    src={`http://static01.nyt.com/${article.multimedia[1].url}`}
-                    alt="article img"
-                    className="mr-3 align-self-start"
-                  /> 
-                  <h4 className="mt-0">{article.snippet}</h4>
-                  </div>
-                 
-                 <p id="article-paragraph">{article.lead_paragraph}</p> 
-                 <br></br>
-                 <br></br>
-                  <a className="content" href={article.web_url} target="_blank" rel="noopener noreferrer">
-                    View Full Article
->>>>>>> 384ee5a5a785d8468e669f177087d9e8ed99572c
                   </a>
                   </li>
                 </div>
