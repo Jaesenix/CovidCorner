@@ -4,6 +4,11 @@
     margin-right: auto;
     border-style: none;
     background-color: #F5F5F5;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+
 }
 
 

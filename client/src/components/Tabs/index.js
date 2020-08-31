@@ -86,7 +86,7 @@ export default function VerticalTabs() {
         className={classes.tabs}
       >
         <Tab label="Welcome" {...a11yProps(0)} style={styles.tabLabel}/>
-        <Tab id="tabLabel" label="Overview" {...a11yProps(1)} style={styles.tabLabel}/>
+        <Tab id="tabLabel" label="Symptoms, Prevention and Treatment" {...a11yProps(1)} style={styles.tabLabel}/>
         <Tab label="Self-Assessment" {...a11yProps(2)} style={styles.tabLabel}/>
         <Tab label="Find a Testing Center" {...a11yProps(3)} style={styles.tabLabel}/>
         <Tab label="Additional Resources" {...a11yProps(4)} style={styles.tabLabel}/>
@@ -100,15 +100,15 @@ export default function VerticalTabs() {
       <Overview />
       </TabPanel>
       
-      <TabPanel className="panel" value={value} index={2}>
+      <TabPanel className="panel" value={value} index={2} style={{backgroundColor: '#F5F5F5'}}>
       <Assessment />
       </TabPanel>
 
-      <TabPanel value={value} index={3}>
+      <TabPanel value={value} index={3} style={{backgroundColor: '#F5F5F5'}}>
        Find a Testing Center
       </TabPanel>
 
-      <TabPanel className="panel" value={value} index={4}>
+      <TabPanel className="panel" value={value} index={4} style={{backgroundColor: '#F5F5F5'}}>
       <ResourceCard />
       </TabPanel>
 
