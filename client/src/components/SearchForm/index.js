@@ -17,6 +17,7 @@ function SearchForm(props) {
         className="form-control state-search-form"
         placeholder="Select a state to begin"
         id="state" 
+        style={{width: '300px'}}
         />
             <button type="submit" onClick={props.handleFormSubmit} className="btn welcome-btn">
         Search
