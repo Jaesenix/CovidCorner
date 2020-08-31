@@ -1,6 +1,5 @@
 import React from "react";
 import { Grid } from '@material-ui/core';
-import { Link } from 'react-router-dom';
 import Map from '../components/Map';
 import Stats from '../components/Stats';
 import Prompts from '../components/Prompts';
@@ -36,8 +35,6 @@ function Home () {
        
         </Grid>
         <Grid item xs={9} style={{justifyContent: 'center'}}>
-          {/* <h3 style={styles.mapTop}>Total U.S. Cases by State</h3>
-          <p style={styles.mapTop2}>*hover over each state to see positive cases by jurisdiction</p> */}
           <Map />
         </Grid>
         <Grid item xs={1}>

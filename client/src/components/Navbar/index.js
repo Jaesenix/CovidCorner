@@ -19,19 +19,19 @@ function Navbar() {
     }
 
     return (
-        <div className="navbar navbar-dark bg-dark">
+        <div className="navbar  fixed-top navbar-dark bg-dark">
             {!userLoggedIn ? (
                 // if the user is Logged out
                 <div>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <Link className="logo" to="/"><img id="logo" src={Logo}></img></Link>
+                        <Link className="logo" to="/"><img id="logo" src={Logo} alt="CovidCorner Logo"></img></Link>
                         <Link className="nav-link" to="/login" style={{ fontSize: '16px' }}>Login</Link>
                     </div>
                 </div>
             ) : (
                     // If the user is Logged In
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <Link className="logo" to="/"><img id="logo" src={Logo}></img></Link>
+                        <Link className="logo" to="/"><img id="logo" src={Logo} alt="CovidCorner Logo"></img></Link>
                         <Link className="nav-link" onClick={() => logout()} to='/' style={{ fontSize: '16px' }}>Logout</Link>
                         <Link className="nav-link" to="/members" style={{ fontSize: '16px' }}>Discover</Link>
                     </div>

@@ -22,7 +22,7 @@ class NYT extends Component {
   }
 
 
-    // Search the NY Times API for `this.state.search`
+    // Search the NY Times API
     handleChange = event => {
         event.preventDefault();
         this.Results(this.state.Results);
@@ -54,7 +54,7 @@ class NYT extends Component {
                  <p id="article-paragraph">{article.lead_paragraph}</p> 
                  <br></br>
                  <br></br>
-                  <a className="content" href={article.web_url} target="_blank">
+                  <a className="content" href={article.web_url} target="_blank" rel="noopener noreferrer">
                     View Full Article
                   </a>
                 </li>
