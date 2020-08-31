@@ -1,10 +1,16 @@
 
 
-.body {
+.overview-body, .prevention-body, .treatment-body {
     font-family: 'Nunito', sans-serif;
     font-size: 14px;
-    color: #353535
+    color: #353535;
+  
 }
+
+    /* .overview-container{
+    border: 1px solid #8F8F8F;
+    border-radius: 3px;
+} */
 
 .disclaimer {
     font-family: 'Nunito', sans-serif;

@@ -54,7 +54,7 @@ class NYT extends Component {
                  <p id="article-paragraph">{article.lead_paragraph}</p> 
                  <br></br>
                  <br></br>
-                  <a className="content" href={article.web_url} target="_blank">
+                  <a className="content" href={article.web_url} target="_blank" rel="noopener noreferrer">
                     View Full Article
                   </a>
                 </li>

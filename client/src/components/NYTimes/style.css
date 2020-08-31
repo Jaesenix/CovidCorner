@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 .mr-3 {
   height: 200px;
-  width: 200px;
+  width: 300px;
   float: left;
   margin-right: 10px;
 }
@@ -25,9 +24,6 @@
   font-size: 16px;
 }
 /* div {
-=======
-.nytimes {
->>>>>>> 61ae084d5c716a4979ba740640212a05d795e333
   background-color: #f5f5f5;
   width: 70%;
   height: 70%;

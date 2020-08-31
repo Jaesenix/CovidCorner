@@ -1,0 +1,15 @@
+.mask-card {
+    border: #4D8B93 solid 2px;
+    border-radius: 25px;
+    padding: 10px;
+    margin-bottom: 15px;
+
+}
+
+.mask-card-top {
+    border-radius: 25px;
+}
+
+.btn {
+    margin-right: 10px;
+}
